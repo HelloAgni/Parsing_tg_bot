@@ -19,7 +19,7 @@ def rework(item):
 
 def parsing_info(items: list, result: dict):
     """
-    Функция настройки драйвера и сбора информации из exl файла.
+    Функция настройки драйвера selenium и сбора информации из exl файла.
     """
     service = Service(executable_path=ChromeDriverManager().install())
     option = webdriver.ChromeOptions()

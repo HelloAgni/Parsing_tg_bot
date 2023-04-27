@@ -1,7 +1,7 @@
-import pathlib
 import re
-from config import TEMP_DIR, EXTENSIONS
+
 import lxml.etree
+from config import EXTENSIONS, TEMP_DIR
 from lxml.etree import XPathSyntaxError
 
 
@@ -23,8 +23,7 @@ def check_file(doc):
     """
     file_name = doc['file_path'].split('/')[-1]
     if check_extensions(file_name):
-        current_dir = pathlib.Path(__file__).parent
-        file_path = str(current_dir) + TEMP_DIR + file_name
+        file_path = TEMP_DIR + file_name
         return file_path
     return False
 
