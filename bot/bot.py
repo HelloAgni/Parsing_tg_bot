@@ -3,7 +3,7 @@ import signal
 
 import msg
 from dotenv import load_dotenv
-from parsing import open_file_and_parsing
+from parsing_thread import main_parsing
 from table_to_db import check_table_and_insert_data
 from telegram import ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
@@ -39,7 +39,7 @@ async def my_file(update, context):
                 text=msg.msg_upload(report['table'])
             )
             try:
-                result, pars_time = open_file_and_parsing(file=file_path)
+                result, pars_time = main_parsing(file=file_path)
                 await context.bot.send_message(
                     chat_id=chat.id,
                     text=f'{result}{msg.msg_time_pars()}{pars_time}c.')
