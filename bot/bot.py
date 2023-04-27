@@ -4,7 +4,7 @@ import signal
 import msg
 from dotenv import load_dotenv
 from parsing import open_file_and_parsing
-from table_check import check_table_and_insert_data
+from table_to_db import check_table_and_insert_data
 from telegram import ReplyKeyboardRemove
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
 from validators import check_file
