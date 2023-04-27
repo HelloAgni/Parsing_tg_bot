@@ -43,6 +43,6 @@ python bot/bot.py
 # Бота можно системно остановить из телеграм чата
 /stop
 ```
-Образец Exel файла доступен по ссылке:
-https://github.com/HelloAgni/Parsing_tg_bot/blob/main/xpath.xlsx
+Образец Exel файла доступен по ссылке:  
+https://github.com/HelloAgni/Parsing_tg_bot/blob/main/xpath.xlsx  
 После загрузки файл открыть с помощью Excel редактора.
